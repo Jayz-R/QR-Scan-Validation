@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QR Code Scanner</title>
+  <style>
+  body {
+    background-color: #27264f;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    color: white;
+    height: 100px;
+    position: relative;
+    top: 50px;
+  }
+  .logo {
+    margin: 0px;
+    position: relative;
+    top: -20px;
+    width: 200px;
+    height: auto;
+  }
+  .container {
+    background-color: #0E1331;
+    height: 500px;
+    width: 800px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    color: white;
+  }
+  .container h1 {
+    position: relative;
+    bottom: 30px;
+  }
+    #scanner-container {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #video-preview {
+      position: relative;
+      bottom: 50px;
+      width: 100%;
+    }
+
+    #result {
+      position: relative;
+      bottom: 40px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="scanner-container">
+    <img src="../dict_logo.png" alt="Dict Logo" class="logo">
+    <h1>SCAN QR CODE</h1>
+    <video id="video-preview"></video>
+    <div id="result"></div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.rawgit.com/cozmo/jsQR/master/dist/jsQR.js"></script>
+  <script src="../script.js"></script>
+</body>
+</html>
